@@ -1,0 +1,92 @@
+:root{
+    --violet:#ADA2FF;
+    --skyble:#C0DEFF;
+    --pink:#FFE5F0;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+main {
+    width: 500px;
+    height: 700px;
+    border: 1px solid black;
+
+}
+
+.header{
+    height: 200px;
+    background-color: white;
+}
+.title{
+    display: flex;
+}
+.title h1{
+    position: relative;
+    left: 30px;
+    font-size: 100px;
+    font-weight:800;
+}
+.title h4{
+    position:relative;
+    font-size: 50px;
+    left: 175px;
+    margin: 75px 0px 0px 0px;
+}
+.line{
+    height: 2px;
+    background-color: black;
+    margin: 0px 20px;
+}
+.subTitle{
+    display: flex;
+}
+.subTitle div{
+    width: 100px;
+    text-align: left;
+    margin: 20px;
+}
+
+.subTitle div:nth-child(2){
+    position: relative;
+    right: 20px;
+}
+
+.subTitle div:last-child{
+    position: relative;
+    text-align: right;
+    left: 50px;
+}
+
+.main_color{
+    background-color: white;
+}
+.row1,.row2,.row3{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row1 div, .row2 div, .row3 div{
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+    background-color: var(--pink);
+    border-radius: 50%;
+}
+
+.row2 div{
+    background-color: var(--violet);
+}
+.row3 div{
+    background-color: var(--skyble);
+}
