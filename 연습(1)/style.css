@@ -1,0 +1,56 @@
+body{
+    /*display: flex; 얘를 주면 밑에것이 적용이 안됨. 왜?*/
+}
+/*flexbox를 사용하기 위해서는 바로 위 부모에 flex를 주어야함 붙어있는 부모가 자식을 움직일 수 있음 */
+.wrapper{
+    display: grid;
+    /* grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 100px 50px 300px;
+    gap: 5px; */
+    /* column-gap:10px;
+    row-gap: 10px; */
+    /* justify-content: space-around; /*main axis방향*/
+    /* align-content: flex-start;줄간격을 없앨 수 있음 line(cross axis에 있는) 변경 */
+}
+.box{
+    background: peru;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    display: flex;
+    flex-basis: 30%;
+}
+
+.box:nth-child(2){
+    /* flex-basis: 300px; 늘어나거나 줄어들기 전에 기본값을줌  main axis에서 적용 */
+    /* flex-grow: 2; 기본값 0 */
+    /* flex-shrink: 4;다른 박스보다 두배로 줄어들음! 기본은 1 */
+    /* order: 1; 기본적으로 box의 order는 0ㅇ이다 */
+}
+.box:last-child{
+    /* align-self: flex-end; 부모에 높이주는 것 필수 
+    order: 0; */
+}
+
+/* .box {
+    background: blue;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2px;
+    기본적으로 display:block , block옆에는 어떤 element도 올 수 없음(엄청 큰 마진!)
+    display: inline-block; block속성을 유지하고 옆에 있을 수 있게 해줌!
+    inline은 박스가 아님. element임 즉 넢이와 높이를 가질 수 없음.
+    text는 inline임!
+    color: white;
+}
+.box:nth-child(2){
+    margin-left: 50px;
+}
+
+.box:nth-child(3){
+    margin-left: 80px;
+} */
+
+/*flex box는 children과 얘기하짐않음.
+flexbox에서 뭔가를 움직이고 싶을때 flexbox container를 만들어야함.*/

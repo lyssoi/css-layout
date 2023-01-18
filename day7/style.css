@@ -1,0 +1,72 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 5vh 45vh 45vh 5vh;
+    grid-template-columns: 5vh 140vh 5vh;
+}
+main div:not(.main){
+    border: 5px solid #A555EC;
+    font-size: 2rem;
+    font-family: 'Source Serif Pro', serif;
+}
+.topBar{
+    grid-column: 1/-1;
+    grid-row: 1/1;
+    color: #A555EC;
+}
+.leftBar-top{
+    background-color: #A555EC;
+    grid-column: 1/1;
+    grid-row: 2/2;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: white;
+}
+.leftBar-under{
+    background-color: white;
+    grid-column: 1/1;
+    grid-row: 3/3;
+    writing-mode: vertical-rl;
+    color: #A555EC;
+    border-bottom: none;
+}
+.underBar{
+    background-color: white;
+    grid-column: 1/-1;
+    grid-row: 4/-1;
+    color: #A555EC;
+}
+.rightBar-top{
+    display: flex;
+    background-color: #FFFFD0;
+    grid-column: 3/3;
+    grid-row: 2/2;
+    color: #A555EC;
+    writing-mode: vertical-lr;
+    justify-content: center;
+    align-items: center;
+}
+.rightBar-under{
+    display: flex;
+    background-color: #FFFFD0;
+    grid-column: 3/3;
+    grid-row: 3/3;
+    writing-mode: vertical-lr;
+    justify-content: center;
+    color: #A555EC;
+    align-items: center;
+}
+.main{
+    background-color: ivory;
+    grid-column: 2/2;
+    grid-row: 2/4;
+    background-image:url('newjeans.jpg')
+}

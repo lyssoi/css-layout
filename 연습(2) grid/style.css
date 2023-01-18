@@ -1,0 +1,70 @@
+.grid{
+    display: grid;
+    gap: 10px;
+    color: white;
+    grid-template-columns: repeat(auto-fit,minmax(2px,max-content));
+    grid-template-rows: 100px;
+    /* grid-auto-flow: column;
+    grid-auto-columns: 100px; */
+    /* grid-auto-rows: 100px;  달력만들기 좋음 ㅋ */
+   /* place-content: center end; 전체그리드를 수직,수평으로 움직임*/
+   /* place-items: 각 사각형 하나하나에 어떤 것을 적용하는지 */
+    
+    /* align-content: space-evenly; 전체 그리드를 수직적으로 움직임
+    justify-content: space-evenly; 전체 그리드를 수평적으로 움직임*/
+    /* grid-template-columns: repeat(4, 1fr); fr은 반응형!!*/
+    /* grid-template-rows: repeat(4, 100px [lovelyline]);라인에 이름붙일 수 있음/ */
+    /* grid-template-areas: 
+    "header header header header"
+    "content content . nav"
+    "content content . nav"
+    "footer footer footer footer"; */
+}
+.item:nth-child(odd){
+    background-color: #2ecc71;
+}
+.item:nth-child(even){
+    background-color:lightblue;
+}
+/* .grid:first-child{
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+}
+.grid:last-child{
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+} */
+
+.header{
+    background-color:tomato;
+    /* place-self: start center; */
+    /* align-self: end;
+    justify-self: center; 개별적으로 움직임 */
+    /* grid-column: span 4; */
+    /*span은 차지하는 셸을 의미함!*/
+    /* grid-column-start: 1;
+    grid-column-end:5; */
+    /* grid-area: header; */
+}
+.content{
+    background-color: bisque;
+    /* grid-column: 1/-2;
+    grid-row:2/4; */
+    /* grid-area: content; */
+}
+.content h1{
+    font-size: 50px;
+    color:white;
+}
+.nav{
+    background-color: cornflowerblue;
+    /* grid-row:2/4 */
+
+    /* grid-area: nav; */
+}
+.footer{
+    background-color:lightcoral;
+    /* grid-column: span 4; */
+    /* grid-column: 1/ -1 ;  */
+    /*-1은 끝을 나타냄*/
+    /* grid-column: 1/5; */
+    /* grid-area: footer; */
+}
